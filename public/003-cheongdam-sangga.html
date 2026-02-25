@@ -8,6 +8,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="청담동 상가건물 통임대">
   <meta property="og:description" content="보증금 3억/월세 2,250만 | 147평 | 즉입주 통건물">
+  <meta property="og:image" content="/images/003/photo_001.jpg">
   <meta property="og:url" content="">
 
   <title>상가건물 - 서울특별시 강남구 청담동 도산대로99길 52</title>
@@ -25,10 +26,37 @@
     .bar { height: 8px; border-radius: 4px; background: #E2E8F0; overflow: hidden; }
     .bar-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #3B82F6, #2563EB); }
     .section-title { font-size: 13px; font-weight: 700; color: #64748B; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
+    /* 이미지 슬라이더 */
+    .slider { position: relative; overflow: hidden; border-radius: 0; }
+    .slider-track { display: flex; transition: transform 0.3s ease; }
+    .slider-track img { min-width: 100%; height: 240px; object-fit: cover; }
+    .slider-dots { position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; }
+    .slider-dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.5); cursor: pointer; }
+    .slider-dot.active { background: #fff; }
+    .slider-counter { position: absolute; top: 12px; right: 12px; background: rgba(0,0,0,0.5); color: #fff; padding: 4px 10px; border-radius: 12px; font-size: 12px; }
   </style>
 </head>
 <body class="bg-slate-50 min-h-screen">
   <div class="max-w-lg mx-auto bg-white min-h-screen shadow-sm">
+
+    <!-- 매물 사진 슬라이더 -->
+    <div class="slider" id="photoSlider">
+      <div class="slider-track" id="sliderTrack">
+        <img src="/images/003/photo_001.jpg" alt="상가건물 외관">
+        <img src="/images/003/photo_006.jpg" alt="상가건물 내부 1">
+        <img src="/images/003/photo_007.jpg" alt="상가건물 내부 2">
+        <img src="/images/003/photo_005.jpg" alt="상가건물 내부 3">
+        <img src="/images/003/photo_002.jpg" alt="상가건물 외관 2">
+      </div>
+      <div class="slider-counter"><span id="currentSlide">1</span> / 5</div>
+      <div class="slider-dots" id="sliderDots">
+        <span class="slider-dot active" onclick="goSlide(0)"></span>
+        <span class="slider-dot" onclick="goSlide(1)"></span>
+        <span class="slider-dot" onclick="goSlide(2)"></span>
+        <span class="slider-dot" onclick="goSlide(3)"></span>
+        <span class="slider-dot" onclick="goSlide(4)"></span>
+      </div>
+    </div>
 
     <!-- 헤더: 위치 + 가격 -->
     <div class="gradient-header text-white px-5 pt-8 pb-6">
@@ -127,6 +155,20 @@
       </div>
     </div>
 
+    <!-- 위치 지도 -->
+    <div class="px-5 mt-6">
+      <p class="section-title">위치</p>
+      <div class="rounded-xl overflow-hidden border border-slate-200">
+        <iframe
+          src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EA%B0%95%EB%82%A8%EA%B5%AC+%EC%B2%AD%EB%8B%B4%EB%8F%99+%EB%8F%84%EC%82%B0%EB%8C%80%EB%A1%9C99%EA%B8%B8+52&t=&z=16&ie=UTF8&iwloc=&output=embed"
+          width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <p class="text-xs text-slate-500 mt-2 flex items-center gap-1">
+        <span>📍</span> 서울특별시 강남구 청담동 도산대로99길 52
+      </p>
+    </div>
+
     <!-- AI 분석 -->
     <div class="px-5 mt-6">
       <p class="section-title">AI 분석</p>
@@ -184,5 +226,33 @@
     </div>
 
   </div>
+
+  <!-- 슬라이더 스크립트 -->
+  <script>
+    let currentIdx = 0;
+    const total = 5;
+    const track = document.getElementById('sliderTrack');
+    const dots = document.querySelectorAll('.slider-dot');
+    const counter = document.getElementById('currentSlide');
+    const slider = document.getElementById('photoSlider');
+
+    function goSlide(idx) {
+      currentIdx = idx;
+      track.style.transform = `translateX(-${idx * 100}%)`;
+      dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+      counter.textContent = idx + 1;
+    }
+
+    // 터치 스와이프
+    let startX = 0;
+    slider.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
+    slider.addEventListener('touchend', e => {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0 && currentIdx < total - 1) goSlide(currentIdx + 1);
+        if (diff < 0 && currentIdx > 0) goSlide(currentIdx - 1);
+      }
+    });
+  </script>
 </body>
 </html>
