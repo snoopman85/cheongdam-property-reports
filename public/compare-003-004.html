@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="청담동 매물 비교 — 상가건물 vs 신축빌딩">
+  <meta property="og:description" content="청담동 통임대 2건 비교 | 월세 2,250만 vs 3,500만">
+  <meta property="og:image" content="/images/003/photo_001.jpg">
+  <title>청담동 매물 비교 — 003 vs 004</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <style>
+    body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif; }
+    .slider { position: relative; overflow: hidden; }
+    .slider-track { display: flex; transition: transform 0.3s ease; }
+    .slider-track img { min-width: 100%; height: 200px; object-fit: cover; }
+    .slider-counter { position: absolute; top: 8px; right: 8px; background: rgba(0,0,0,0.5); color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 11px; }
+    .slider-dots { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px; }
+    .slider-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.5); cursor: pointer; }
+    .slider-dot.active { background: #fff; }
+    .info-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #F1F5F9; font-size: 13px; }
+    .info-row:last-child { border-bottom: none; }
+    .bar { height: 6px; border-radius: 3px; background: #E2E8F0; overflow: hidden; }
+    .bar-fill { height: 100%; border-radius: 3px; }
+    .section-title { font-size: 11px; font-weight: 700; color: #64748B; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 8px; }
+    .card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+    .divider { height: 8px; background: #F1F5F9; }
+    .gradient-a { background: linear-gradient(135deg, #1E40AF 0%, #3B82F6 100%); }
+    .gradient-b { background: linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%); }
+  </style>
+</head>
+<body class="bg-slate-100 min-h-screen">
+  <div class="max-w-lg mx-auto bg-slate-100 min-h-screen">
+
+    <!-- 페이지 헤더 -->
+    <div class="bg-white px-5 py-4 sticky top-0 z-50 border-b border-slate-200">
+      <h1 class="text-base font-bold text-slate-800">청담동 매물 비교</h1>
+      <p class="text-xs text-slate-500 mt-0.5">2건 비교 · 2026-02-25 기준</p>
+    </div>
+
+    <!-- ==================== 매물 A: 003 ==================== -->
+    <div class="p-3 pt-3">
+      <div class="card">
+
+        <!-- 사진 -->
+        <div class="slider" id="sliderA">
+          <div class="slider-track" id="trackA">
+            <img src="/images/003/photo_001.jpg" alt="003 외관">
+            <img src="/images/003/photo_006.jpg" alt="003 내부 1">
+            <img src="/images/003/photo_007.jpg" alt="003 내부 2">
+            <img src="/images/003/photo_005.jpg" alt="003 내부 3">
+            <img src="/images/003/photo_002.jpg" alt="003 외관 2">
+          </div>
+          <div class="slider-counter"><span id="cntA">1</span>/5</div>
+          <div class="slider-dots" id="dotsA">
+            <span class="slider-dot active"></span><span class="slider-dot"></span><span class="slider-dot"></span><span class="slider-dot"></span><span class="slider-dot"></span>
+          </div>
+        </div>
+
+        <!-- 가격 헤더 -->
+        <div class="gradient-a text-white px-4 py-4">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="bg-white/20 rounded-full px-2 py-0.5 text-[10px] font-semibold">A</span>
+            <span class="bg-white/20 rounded-full px-2 py-0.5 text-[10px]">월세</span>
+            <span class="bg-white/20 rounded-full px-2 py-0.5 text-[10px]">상가건물</span>
+          </div>
+          <h2 class="text-lg font-bold">상가건물 · 청담동 도산대로99길</h2>
+          <div class="flex justify-between items-end mt-3 bg-white/10 rounded-lg p-3">
+            <div>
+              <p class="text-blue-200 text-[10px]">보증금</p>
+              <p class="text-xl font-extrabold">3억원</p>
+            </div>
+            <div class="text-right">
+              <p class="text-blue-200 text-[10px]">월세</p>
+              <p class="text-xl font-extrabold">2,250만원</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 스펙 뱃지 -->
+        <div class="flex justify-around text-center py-3 border-b border-slate-100">
+          <div>
+            <p class="text-base font-bold text-slate-800">147평</p>
+            <p class="text-[10px] text-slate-500">연면적</p>
+          </div>
+          <div class="border-l border-slate-200"></div>
+          <div>
+            <p class="text-base font-bold text-slate-800">4/-1층</p>
+            <p class="text-[10px] text-slate-500">지상/지하</p>
+          </div>
+          <div class="border-l border-slate-200"></div>
+          <div>
+            <p class="text-base font-bold text-slate-800">4대</p>
+            <p class="text-[10px] text-slate-500">주차</p>
+          </div>
+          <div class="border-l border-slate-200"></div>
+          <div>
+            <p class="text-base font-bold text-slate-800">2010</p>
+            <p class="text-[10px] text-slate-500">준공</p>
+          </div>
+        </div>
+
+        <!-- 하이라이트 -->
+        <div class="px-4 py-3">
+          <div class="space-y-2">
+            <div class="flex items-start gap-2">
+              <span class="text-sm">📍</span>
+              <span class="text-xs text-slate-700">청담동 도산대로 인접, 엔터·뷰티·갤러리 밀집 핵심 상권</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-sm">🏢</span>
+              <span class="text-xs text-slate-700">지하1~지상4층 통건물, 연면적 147평 단독 사용</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-sm">🚗</span>
+              <span class="text-xs text-slate-700">자체 주차 5대, 방문객 편의 보장</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-sm">🔑</span>
+              <span class="text-xs text-slate-700">현재 공실, 즉시 입주 가능</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI 분석 -->
+        <div class="px-4 pb-3">
+          <div class="bg-blue-50 border border-blue-100 rounded-lg p-3">
+            <p class="text-xs text-slate-600 leading-relaxed">청담동 도산대로 인근 핵심 상권에 위치한 통건물로, 브랜드 노출과 기업 아이덴티티 구축에 최적화된 입지입니다. 평균 월세 2,983만원 대비 2,250만원으로 약 25% 저렴하여 비용 효율이 높습니다. 엔터테인먼트사, 뷰티 브랜드, 갤러리, 플래그십 스토어에 적합합니다.</p>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="px-4 pb-4 flex gap-2">
+          <a href="tel:02-6369-1460" class="flex-1 bg-blue-600 text-white text-center py-2.5 rounded-lg font-bold text-xs">📞 문의</a>
+          <a href="https://fin.land.naver.com/articles/2608517465" target="_blank" class="flex-1 bg-white border border-slate-200 text-slate-700 text-center py-2.5 rounded-lg font-bold text-xs">🔗 네이버</a>
+          <a href="/003-cheongdam-sangga" class="flex-1 bg-slate-100 text-slate-600 text-center py-2.5 rounded-lg font-bold text-xs">📄 상세</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== 매물 B: 004 ==================== -->
+    <div class="p-3 pt-0">
+      <div class="card">
+
+        <!-- 사진 -->
+        <div class="slider" id="sliderB">
+          <div class="slider-track" id="trackB">
+            <img src="/images/004/photo_001.jpg" alt="004 외관">
+            <img src="/images/004/photo_006.jpg" alt="004 내부 1">
+            <img src="/images/004/photo_007.jpg" alt="004 내부 2">
+            <img src="/images/004/photo_005.jpg" alt="004 내부 3">
+            <img src="/images/004/photo_002.jpg" alt="004 외관 2">
+          </div>
+          <div class="slider-counter"><span id="cntB">1</span>/5</div>
+          <div class="slider-dots" id="dotsB">
+            <span class="slider-dot active"></span><span class="slider-dot"></span><span class="slider-dot"></span><span class="slider-dot"></span><span class="slider-dot"></span>
+          </div>
+        </div>
+
+        <!-- 가격 헤더 -->
+        <div class="gradient-b text-white px-4 py-4">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="bg-white/20 rounded-full px-2 py-0.5 text-[10px] font-semibold">B</span>
+            <span class="bg-white/20 rounded-full px-2 py-0.5 text-[10px]">월세</span>
+            <span class="bg-white/20 rounded-full px-2 py-0.5 text-[10px]">신축빌딩</span>
+          </div>
+          <h2 class="text-lg font-bold">빌딩 · 청담동 선릉로162길</h2>
+          <div class="flex justify-between items-end mt-3 bg-white/10 rounded-lg p-3">
+            <div>
+              <p class="text-purple-200 text-[10px]">보증금</p>
+              <p class="text-xl font-extrabold">4억 5,000만원</p>
+            </div>
+            <div class="text-right">
+              <p class="text-purple-200 text-[10px]">월세</p>
+              <p class="text-xl font-extrabold">3,500만원</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 스펙 뱃지 -->
+        <div class="flex justify-around text-center py-3 border-b border-slate-100">
+          <div>
+            <p class="text-base font-bold text-slate-800">139평</p>
+            <p class="text-[10px] text-slate-500">연면적</p>
+          </div>
+          <div class="border-l border-slate-200"></div>
+          <div>
+            <p class="text-base font-bold text-slate-800">5/-1층</p>
+            <p class="text-[10px] text-slate-500">지상/지하</p>
+          </div>
+          <div class="border-l border-slate-200"></div>
+          <div>
+            <p class="text-base font-bold text-slate-800">3대</p>
+            <p class="text-[10px] text-slate-500">주차</p>
+          </div>
+          <div class="border-l border-slate-200"></div>
+          <div>
+            <p class="text-base font-bold text-slate-800 text-purple-600">2025</p>
+            <p class="text-[10px] text-slate-500">신축</p>
+          </div>
+        </div>
+
+        <!-- 하이라이트 -->
+        <div class="px-4 py-3">
+          <div class="space-y-2">
+            <div class="flex items-start gap-2">
+              <span class="text-sm">🏗️</span>
+              <span class="text-xs text-slate-700">2025년 2월 신축 완공 — 최신 설비 완비</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-sm">🚇</span>
+              <span class="text-xs text-slate-700">압구정로데오역 도보 3분 초역세권</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-sm">📐</span>
+              <span class="text-xs text-slate-700">연면적 138.68평 / 지상5층·지하1층</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-sm">🚗</span>
+              <span class="text-xs text-slate-700">무료주차 3대 (청담동 희소 조건)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI 분석 -->
+        <div class="px-4 pb-3">
+          <div class="bg-purple-50 border border-purple-100 rounded-lg p-3">
+            <p class="text-xs text-slate-600 leading-relaxed">2025년 2월 준공 신축 빌딩으로, 최신 건축 기준과 현대적 내외장재를 갖추고 있습니다. 월세 3,500만원은 평균 대비 약 17% 높으나 신축 프리미엄과 역세권 입지를 감안하면 합리적입니다. 플래그십 스토어, 프리미엄 F&B, 미디어·엔터테인먼트 법인에 추천드립니다.</p>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="px-4 pb-4 flex gap-2">
+          <a href="tel:010-7518-8292" class="flex-1 bg-purple-600 text-white text-center py-2.5 rounded-lg font-bold text-xs">📞 문의</a>
+          <a href="https://fin.land.naver.com/articles/2605436366" target="_blank" class="flex-1 bg-white border border-slate-200 text-slate-700 text-center py-2.5 rounded-lg font-bold text-xs">🔗 네이버</a>
+          <a href="/004-cheongdam-building" class="flex-1 bg-slate-100 text-slate-600 text-center py-2.5 rounded-lg font-bold text-xs">📄 상세</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== 비교 테이블 ==================== -->
+    <div class="p-3 pt-0">
+      <div class="card p-4">
+        <p class="section-title">항목별 비교</p>
+        <table class="w-full text-xs">
+          <thead>
+            <tr class="border-b border-slate-200">
+              <th class="text-left py-2 text-slate-500 font-medium">항목</th>
+              <th class="text-center py-2 text-blue-600 font-bold">A 상가건물</th>
+              <th class="text-center py-2 text-purple-600 font-bold">B 신축빌딩</th>
+            </tr>
+          </thead>
+          <tbody class="text-slate-700">
+            <tr class="border-b border-slate-100">
+              <td class="py-2.5 text-slate-500">보증금</td>
+              <td class="text-center font-semibold">3억</td>
+              <td class="text-center font-semibold">4.5억</td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td class="py-2.5 text-slate-500">월세</td>
+              <td class="text-center font-semibold text-blue-600">2,250만 ✓</td>
+              <td class="text-center font-semibold">3,500만</td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td class="py-2.5 text-slate-500">연면적</td>
+              <td class="text-center font-semibold text-blue-600">147평 ✓</td>
+              <td class="text-center font-semibold">139평</td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td class="py-2.5 text-slate-500">층수</td>
+              <td class="text-center">4층/-1층</td>
+              <td class="text-center font-semibold text-purple-600">5층/-1층 ✓</td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td class="py-2.5 text-slate-500">주차</td>
+              <td class="text-center font-semibold text-blue-600">4대 ✓</td>
+              <td class="text-center">3대</td>
+            </tr>
+            <tr class="border-b border-slate-100">
+              <td class="py-2.5 text-slate-500">준공</td>
+              <td class="text-center">2010년</td>
+              <td class="text-center font-semibold text-purple-600">2025년 ✓</td>
+            </tr>
+            <tr>
+              <td class="py-2.5 text-slate-500">평당 월세</td>
+              <td class="text-center font-semibold text-blue-600">15.3만/평 ✓</td>
+              <td class="text-center font-semibold">25.2만/평</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- 시세 비교 바 -->
+    <div class="p-3 pt-0">
+      <div class="card p-4">
+        <p class="section-title">월세 시세 포지션</p>
+        <div class="space-y-3">
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="font-medium text-blue-600">A 상가건물</span>
+              <span class="font-bold text-slate-700">2,250만</span>
+            </div>
+            <div class="bar"><div class="bar-fill" style="width:56.25%; background: linear-gradient(90deg, #3B82F6, #2563EB);"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-slate-400">청담동 평균</span>
+              <span class="text-slate-500">2,983만</span>
+            </div>
+            <div class="bar"><div class="bar-fill" style="width:74.6%; background: #CBD5E1;"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="font-medium text-purple-600">B 신축빌딩</span>
+              <span class="font-bold text-slate-700">3,500만</span>
+            </div>
+            <div class="bar"><div class="bar-fill" style="width:87.5%; background: linear-gradient(90deg, #7C3AED, #A78BFA);"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-slate-400">최고가</span>
+              <span class="text-slate-500">4,000만</span>
+            </div>
+            <div class="bar"><div class="bar-fill" style="width:100%; background: #E2E8F0;"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 푸터 -->
+    <div class="p-3 pt-0 pb-6">
+      <div class="text-center text-[10px] text-slate-400 py-3">
+        <p>A: JDC부동산중개법인 · B: 통임대 부동산자판기</p>
+        <p class="mt-1">2026-02-25 기준 · AI 분석 참고용</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 슬라이더 스크립트 -->
+  <script>
+    function createSlider(sliderId, trackId, dotsId, counterId, total) {
+      let idx = 0;
+      const track = document.getElementById(trackId);
+      const dots = document.getElementById(dotsId).children;
+      const cnt = document.getElementById(counterId);
+      const el = document.getElementById(sliderId);
+
+      function go(i) {
+        idx = i;
+        track.style.transform = `translateX(-${i * 100}%)`;
+        Array.from(dots).forEach((d, j) => d.classList.toggle('active', j === i));
+        cnt.textContent = i + 1;
+      }
+
+      let sx = 0;
+      el.addEventListener('touchstart', e => { sx = e.touches[0].clientX; });
+      el.addEventListener('touchend', e => {
+        const diff = sx - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) {
+          if (diff > 0 && idx < total - 1) go(idx + 1);
+          if (diff < 0 && idx > 0) go(idx - 1);
+        }
+      });
+
+      Array.from(dots).forEach((d, i) => d.addEventListener('click', () => go(i)));
+    }
+
+    createSlider('sliderA', 'trackA', 'dotsA', 'cntA', 5);
+    createSlider('sliderB', 'trackB', 'dotsB', 'cntB', 5);
+  </script>
+</body>
+</html>
