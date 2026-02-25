@@ -1,1 +1,504 @@
-<\!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>청담동 매물 보고서</title><script src="https://cdn.tailwindcss.com"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"><style>body{font-family:Pretendard,sans-serif}</style></head><body class="bg-slate-50 min-h-screen flex items-center justify-center"><div class="text-center p-8"><h1 class="text-2xl font-bold text-slate-800 mb-2">청담동 매물 보고서</h1><p class="text-slate-500">보고서 준비 중입니다</p></div></body></html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="청담동 사옥·빌딩 통임대 — 엄선 매물 9건">
+  <meta property="og:description" content="강남 청담동 통임대 전문 | 월세 2,000만~4,000만 | 즉시 입주 가능 매물">
+  <meta property="og:image" content="/images/003/photo_001.jpg">
+  <title>청담동 사옥·빌딩 통임대 — 엄선 매물</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Pretendard', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif; }
+    .hero-bg { background: linear-gradient(135deg, #0F172A 0%, #1E3A5F 50%, #1E40AF 100%); }
+    .glass { background: rgba(255,255,255,0.08); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.12); }
+    .card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.06); transition: transform 0.2s; }
+    .card:active { transform: scale(0.98); }
+    .tag { display: inline-block; padding: 3px 8px; border-radius: 6px; font-size: 11px; font-weight: 600; }
+    .tag-new { background: #DCFCE7; color: #166534; }
+    .tag-area { background: #F1F5F9; color: #475569; }
+    .stat-num { font-size: 28px; font-weight: 800; line-height: 1; }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.5s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .scroll-hint { animation: bounce 2s infinite; }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+    .info-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #F8FAFC; font-size: 12px; }
+    .info-row:last-child { border-bottom: none; }
+  </style>
+</head>
+<body class="bg-slate-50">
+  <div class="max-w-lg mx-auto bg-white min-h-screen">
+
+    <!-- ============ HERO ============ -->
+    <div class="hero-bg text-white relative overflow-hidden">
+      <!-- 배경 패턴 -->
+      <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22><rect fill=%22none%22 width=%2260%22 height=%2260%22/><path d=%22M0 30 L30 0 L60 30 L30 60Z%22 fill=%22none%22 stroke=%22white%22 stroke-width=%220.5%22/></svg>');"></div>
+
+      <div class="relative px-6 pt-12 pb-8">
+        <!-- 로고/브랜드 -->
+        <div class="flex items-center gap-2 mb-8">
+          <div class="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center text-sm font-black">C</div>
+          <span class="text-sm font-semibold text-blue-200">CHEONGDAM PROPERTY</span>
+        </div>
+
+        <!-- 메인 카피 -->
+        <h1 class="text-3xl font-extrabold leading-tight mb-3">
+          청담동<br>
+          <span class="text-blue-300">사옥·빌딩</span><br>
+          통임대 매물
+        </h1>
+        <p class="text-blue-200 text-sm leading-relaxed mb-6">
+          강남 청담동 핵심 상권의 엄선된 통임대 매물을<br>
+          한눈에 비교하세요. AI가 분석한 시세 정보 포함.
+        </p>
+
+        <!-- CTA 뱃지 -->
+        <div class="flex flex-wrap gap-2 mb-8">
+          <span class="glass rounded-full px-4 py-2 text-xs font-medium">엔터·뷰티 상권</span>
+          <span class="glass rounded-full px-4 py-2 text-xs font-medium">즉시 입주 가능</span>
+          <span class="glass rounded-full px-4 py-2 text-xs font-medium">신축 매물 보유</span>
+        </div>
+
+        <!-- 핵심 수치 -->
+        <div class="grid grid-cols-3 gap-3">
+          <div class="glass rounded-xl p-3 text-center">
+            <p class="stat-num text-white">9</p>
+            <p class="text-[10px] text-blue-300 mt-1">엄선 매물</p>
+          </div>
+          <div class="glass rounded-xl p-3 text-center">
+            <p class="stat-num text-white">2,000<span class="text-lg">~</span></p>
+            <p class="text-[10px] text-blue-300 mt-1">월세 (만원~)</p>
+          </div>
+          <div class="glass rounded-xl p-3 text-center">
+            <p class="stat-num text-white">139<span class="text-lg">~</span></p>
+            <p class="text-[10px] text-blue-300 mt-1">면적 (평~)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 스크롤 힌트 -->
+      <div class="text-center pb-6 scroll-hint">
+        <p class="text-[10px] text-blue-300 mb-1">매물 보기</p>
+        <svg class="mx-auto w-5 h-5 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- ============ 시세 요약 바 ============ -->
+    <div class="bg-slate-900 text-white px-6 py-4">
+      <div class="flex justify-between items-center">
+        <div>
+          <p class="text-[10px] text-slate-400">청담동 평균 월세</p>
+          <p class="text-lg font-bold">2,983<span class="text-sm font-normal text-slate-400">만원</span></p>
+        </div>
+        <div class="text-center">
+          <p class="text-[10px] text-slate-400">평균 보증금</p>
+          <p class="text-lg font-bold">3.4<span class="text-sm font-normal text-slate-400">억</span></p>
+        </div>
+        <div class="text-right">
+          <p class="text-[10px] text-slate-400">평균 면적</p>
+          <p class="text-lg font-bold">177<span class="text-sm font-normal text-slate-400">평</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 필터 탭 (디자인용) ============ -->
+    <div class="sticky top-0 z-50 bg-white border-b border-slate-200 px-4 py-3">
+      <div class="flex items-center justify-between">
+        <h2 class="text-sm font-bold text-slate-800">매물 <span class="text-blue-600">9</span>건</h2>
+        <div class="flex gap-1.5">
+          <button onclick="sortCards('price')" class="text-[11px] px-3 py-1.5 rounded-full bg-blue-600 text-white font-medium" id="btnPrice">월세순</button>
+          <button onclick="sortCards('area')" class="text-[11px] px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 font-medium" id="btnArea">면적순</button>
+          <button onclick="sortCards('new')" class="text-[11px] px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 font-medium" id="btnNew">신축</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 매물 카드 리스트 ============ -->
+    <div class="px-4 py-4 space-y-4" id="cardList">
+
+      <!-- 003 -->
+      <div class="card fade-in" data-rent="2250" data-area="147.04" data-new="0">
+        <div class="relative">
+          <img src="/images/003/photo_001.jpg" alt="003" class="w-full h-48 object-cover">
+          <div class="absolute top-3 left-3 flex gap-1.5">
+            <span class="tag tag-area">147평</span>
+          </div>
+          <div class="absolute bottom-3 right-3 bg-black/60 text-white text-[10px] px-2 py-1 rounded-md">사진 17장</div>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <h3 class="font-bold text-base text-slate-800">상가건물</h3>
+              <p class="text-xs text-slate-500">도산대로99길 52</p>
+            </div>
+            <div class="text-right">
+              <p class="text-xs text-slate-400">월세</p>
+              <p class="text-lg font-extrabold text-blue-600">2,250<span class="text-xs font-normal">만</span></p>
+            </div>
+          </div>
+          <div class="flex gap-4 text-xs text-slate-500 mb-3">
+            <span>보증금 <b class="text-slate-700">3억</b></span>
+            <span>지상<b class="text-slate-700">4</b>/지하<b class="text-slate-700">1</b></span>
+            <span>주차 <b class="text-slate-700">4대</b></span>
+            <span>준공 <b class="text-slate-700">2010</b></span>
+          </div>
+          <p class="text-xs text-slate-500 mb-3">청담, 통건물, 공실, 즉입주</p>
+          <div class="flex gap-2">
+            <a href="tel:02-6369-1460" class="flex-1 bg-blue-600 text-white text-center py-2 rounded-lg text-xs font-bold">📞 문의</a>
+            <a href="/003-cheongdam-sangga" class="flex-1 bg-slate-100 text-slate-600 text-center py-2 rounded-lg text-xs font-bold">상세 보기</a>
+            <a href="https://fin.land.naver.com/articles/2608517465" target="_blank" class="px-3 bg-white border border-slate-200 text-slate-500 text-center py-2 rounded-lg text-xs">🔗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 004 -->
+      <div class="card fade-in" data-rent="3500" data-area="138.68" data-new="1">
+        <div class="relative">
+          <img src="/images/004/photo_001.jpg" alt="004" class="w-full h-48 object-cover">
+          <div class="absolute top-3 left-3 flex gap-1.5">
+            <span class="tag tag-new">신축 2025</span>
+            <span class="tag tag-area">139평</span>
+          </div>
+          <div class="absolute bottom-3 right-3 bg-black/60 text-white text-[10px] px-2 py-1 rounded-md">사진 26장</div>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <h3 class="font-bold text-base text-slate-800">빌딩</h3>
+              <p class="text-xs text-slate-500">선릉로162길 25</p>
+            </div>
+            <div class="text-right">
+              <p class="text-xs text-slate-400">월세</p>
+              <p class="text-lg font-extrabold text-blue-600">3,500<span class="text-xs font-normal">만</span></p>
+            </div>
+          </div>
+          <div class="flex gap-4 text-xs text-slate-500 mb-3">
+            <span>보증금 <b class="text-slate-700">4.5억</b></span>
+            <span>지상<b class="text-slate-700">5</b>/지하<b class="text-slate-700">1</b></span>
+            <span>주차 <b class="text-slate-700">3대</b></span>
+            <span>준공 <b class="text-slate-700">2025</b></span>
+          </div>
+          <p class="text-xs text-slate-500 mb-3">신축건물, 통임대, 역세권, 엘리베이터</p>
+          <div class="flex gap-2">
+            <a href="tel:010-7518-8292" class="flex-1 bg-blue-600 text-white text-center py-2 rounded-lg text-xs font-bold">📞 문의</a>
+            <a href="/compare-003-004" class="flex-1 bg-slate-100 text-slate-600 text-center py-2 rounded-lg text-xs font-bold">상세 보기</a>
+            <a href="https://fin.land.naver.com/articles/2605436366" target="_blank" class="px-3 bg-white border border-slate-200 text-slate-500 text-center py-2 rounded-lg text-xs">🔗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 005 -->
+      <div class="card fade-in" data-rent="2000" data-area="231.69" data-new="0">
+        <div class="relative">
+          <img src="/images/005/photo_001.jpg" alt="005" class="w-full h-48 object-cover">
+          <div class="absolute top-3 left-3 flex gap-1.5">
+            <span class="tag tag-area">232평</span>
+          </div>
+          <div class="absolute bottom-3 right-3 bg-black/60 text-white text-[10px] px-2 py-1 rounded-md">사진 18장</div>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <h3 class="font-bold text-base text-slate-800">빌딩</h3>
+              <p class="text-xs text-slate-500">선릉로148길 52-12</p>
+            </div>
+            <div class="text-right">
+              <p class="text-xs text-slate-400">월세</p>
+              <p class="text-lg font-extrabold text-blue-600">2,000<span class="text-xs font-normal">만</span></p>
+            </div>
+          </div>
+          <div class="flex gap-4 text-xs text-slate-500 mb-3">
+            <span>보증금 <b class="text-slate-700">2.5억</b></span>
+            <span>지상<b class="text-slate-700">5</b>/지하<b class="text-slate-700">3</b></span>
+            <span>주차 <b class="text-slate-700">5대</b></span>
+            <span>준공 <b class="text-slate-700">2017</b></span>
+          </div>
+          <p class="text-xs text-slate-500 mb-3">차움병원 뒤편, 코너, 신축건물, 층고높음</p>
+          <div class="flex gap-2">
+            <a href="tel:02-512-5992" class="flex-1 bg-blue-600 text-white text-center py-2 rounded-lg text-xs font-bold">📞 문의</a>
+            <a href="#" class="flex-1 bg-slate-100 text-slate-600 text-center py-2 rounded-lg text-xs font-bold">상세 보기</a>
+            <a href="https://fin.land.naver.com/articles/2605517110" target="_blank" class="px-3 bg-white border border-slate-200 text-slate-500 text-center py-2 rounded-lg text-xs">🔗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 006 -->
+      <div class="card fade-in" data-rent="3100" data-area="220.67" data-new="0">
+        <div class="relative">
+          <img src="/images/006/photo_001.jpg" alt="006" class="w-full h-48 object-cover">
+          <div class="absolute top-3 left-3 flex gap-1.5">
+            <span class="tag tag-area">221평</span>
+          </div>
+          <div class="absolute bottom-3 right-3 bg-black/60 text-white text-[10px] px-2 py-1 rounded-md">사진 28장</div>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <h3 class="font-bold text-base text-slate-800">빌딩</h3>
+              <p class="text-xs text-slate-500">학동로63길 4-1</p>
+            </div>
+            <div class="text-right">
+              <p class="text-xs text-slate-400">월세</p>
+              <p class="text-lg font-extrabold text-blue-600">3,100<span class="text-xs font-normal">만</span></p>
+            </div>
+          </div>
+          <div class="flex gap-4 text-xs text-slate-500 mb-3">
+            <span>보증금 <b class="text-slate-700">4억</b></span>
+            <span>지상<b class="text-slate-700">6</b>/지하<b class="text-slate-700">2</b></span>
+            <span>주차 <b class="text-slate-700">5대</b></span>
+            <span>준공 <b class="text-slate-700">2007</b></span>
+          </div>
+          <p class="text-xs text-slate-500 mb-3">단독건물, 통임대, 역세권, 리모델링</p>
+          <div class="flex gap-2">
+            <a href="tel:010-7518-8292" class="flex-1 bg-blue-600 text-white text-center py-2 rounded-lg text-xs font-bold">📞 문의</a>
+            <a href="#" class="flex-1 bg-slate-100 text-slate-600 text-center py-2 rounded-lg text-xs font-bold">상세 보기</a>
+            <a href="https://fin.land.naver.com/articles/2610086988" target="_blank" class="px-3 bg-white border border-slate-200 text-slate-500 text-center py-2 rounded-lg text-xs">🔗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 007 -->
+      <div class="card fade-in" data-rent="2300" data-area="148.87" data-new="0">
+        <div class="relative">
+          <img src="/images/007/photo_001.jpg" alt="007" class="w-full h-48 object-cover">
+          <div class="absolute top-3 left-3 flex gap-1.5">
+            <span class="tag tag-area">149평</span>
+          </div>
+          <div class="absolute bottom-3 right-3 bg-black/60 text-white text-[10px] px-2 py-1 rounded-md">사진 34장</div>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <h3 class="font-bold text-base text-slate-800">상가건물</h3>
+              <p class="text-xs text-slate-500">도산대로92길 32</p>
+            </div>
+            <div class="text-right">
+              <p class="text-xs text-slate-400">월세</p>
+              <p class="text-lg font-extrabold text-blue-600">2,300<span class="text-xs font-normal">만</span></p>
+            </div>
+          </div>
+          <div class="flex gap-4 text-xs text-slate-500 mb-3">
+            <span>보증금 <b class="text-slate-700">3억</b></span>
+            <span>지상<b class="text-slate-700">6</b>/지하<b class="text-slate-700">1</b></span>
+            <span>주차 <b class="text-slate-700">3대</b></span>
+            <span>준공 <b class="text-slate-700">2023</b></span>
+          </div>
+          <p class="text-xs text-slate-500 mb-3">코너, 소형사옥, 채광우수, 옥상</p>
+          <div class="flex gap-2">
+            <a href="tel:02-518-6890" class="flex-1 bg-blue-600 text-white text-center py-2 rounded-lg text-xs font-bold">📞 문의</a>
+            <a href="#" class="flex-1 bg-slate-100 text-slate-600 text-center py-2 rounded-lg text-xs font-bold">상세 보기</a>
+            <a href="https://fin.land.naver.com/articles/2607864868" target="_blank" class="px-3 bg-white border border-slate-200 text-slate-500 text-center py-2 rounded-lg text-xs">🔗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 008 -->
+      <div class="card fade-in" data-rent="3200" data-area="197.62" data-new="0">
+        <div class="relative">
+          <img src="/images/008/photo_001.jpg" alt="008" class="w-full h-48 object-cover">
+          <div class="absolute top-3 left-3 flex gap-1.5">
+            <span class="tag tag-area">198평</span>
+          </div>
+          <div class="absolute bottom-3 right-3 bg-black/60 text-white text-[10px] px-2 py-1 rounded-md">사진 28장</div>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <h3 class="font-bold text-base text-slate-800">빌딩</h3>
+              <p class="text-xs text-slate-500">도산대로98길 15</p>
+            </div>
+            <div class="text-right">
+              <p class="text-xs text-slate-400">월세</p>
+              <p class="text-lg font-extrabold text-blue-600">3,200<span class="text-xs font-normal">만</span></p>
+            </div>
+          </div>
+          <div class="flex gap-4 text-xs text-slate-500 mb-3">
+            <span>보증금 <b class="text-slate-700">4억</b></span>
+            <span>지상<b class="text-slate-700">4</b>/지하<b class="text-slate-700">1</b></span>
+            <span>주차 <b class="text-slate-700">4대</b></span>
+            <span>준공 <b class="text-slate-700">1996</b></span>
+          </div>
+          <p class="text-xs text-slate-500 mb-3">리모델링건물, 통임대, 청담역근처, 즉시입주</p>
+          <div class="flex gap-2">
+            <a href="tel:02-515-4985" class="flex-1 bg-blue-600 text-white text-center py-2 rounded-lg text-xs font-bold">📞 문의</a>
+            <a href="#" class="flex-1 bg-slate-100 text-slate-600 text-center py-2 rounded-lg text-xs font-bold">상세 보기</a>
+            <a href="https://fin.land.naver.com/articles/2609303004" target="_blank" class="px-3 bg-white border border-slate-200 text-slate-500 text-center py-2 rounded-lg text-xs">🔗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 009 -->
+      <div class="card fade-in" data-rent="4000" data-area="260.54" data-new="0">
+        <div class="relative">
+          <img src="/images/009/photo_001.jpg" alt="009" class="w-full h-48 object-cover">
+          <div class="absolute top-3 left-3 flex gap-1.5">
+            <span class="tag tag-area">261평</span>
+          </div>
+          <div class="absolute bottom-3 right-3 bg-black/60 text-white text-[10px] px-2 py-1 rounded-md">사진 20장</div>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <h3 class="font-bold text-base text-slate-800">빌딩</h3>
+              <p class="text-xs text-slate-500">도산대로102길 14-7</p>
+            </div>
+            <div class="text-right">
+              <p class="text-xs text-slate-400">월세</p>
+              <p class="text-lg font-extrabold text-blue-600">4,000<span class="text-xs font-normal">만</span></p>
+            </div>
+          </div>
+          <div class="flex gap-4 text-xs text-slate-500 mb-3">
+            <span>보증금 <b class="text-slate-700">4억</b></span>
+            <span>지상<b class="text-slate-700">5</b>/지하<b class="text-slate-700">2</b></span>
+            <span>주차 <b class="text-slate-700">6대</b></span>
+            <span>준공 <b class="text-slate-700">미정</b></span>
+          </div>
+          <p class="text-xs text-slate-500 mb-3">엔터밀집, 구조반듯함, 통임대, 층별임대가능</p>
+          <div class="flex gap-2">
+            <a href="tel:02-546-4586" class="flex-1 bg-blue-600 text-white text-center py-2 rounded-lg text-xs font-bold">📞 문의</a>
+            <a href="#" class="flex-1 bg-slate-100 text-slate-600 text-center py-2 rounded-lg text-xs font-bold">상세 보기</a>
+            <a href="https://fin.land.naver.com/articles/2607933281" target="_blank" class="px-3 bg-white border border-slate-200 text-slate-500 text-center py-2 rounded-lg text-xs">🔗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 010 -->
+      <div class="card fade-in" data-rent="3500" data-area="194.10" data-new="1">
+        <div class="relative">
+          <img src="/images/010/photo_001.jpg" alt="010" class="w-full h-48 object-cover">
+          <div class="absolute top-3 left-3 flex gap-1.5">
+            <span class="tag tag-new">신축 2025</span>
+            <span class="tag tag-area">194평</span>
+          </div>
+          <div class="absolute bottom-3 right-3 bg-black/60 text-white text-[10px] px-2 py-1 rounded-md">사진 30장</div>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <h3 class="font-bold text-base text-slate-800">빌딩</h3>
+              <p class="text-xs text-slate-500">삼성로140길 15</p>
+            </div>
+            <div class="text-right">
+              <p class="text-xs text-slate-400">월세</p>
+              <p class="text-lg font-extrabold text-blue-600">3,500<span class="text-xs font-normal">만</span></p>
+            </div>
+          </div>
+          <div class="flex gap-4 text-xs text-slate-500 mb-3">
+            <span>보증금 <b class="text-slate-700">4억</b></span>
+            <span>지상<b class="text-slate-700">5</b>/지하<b class="text-slate-700">2</b></span>
+            <span>주차 <b class="text-slate-700">5대</b></span>
+            <span>준공 <b class="text-slate-700">2025</b></span>
+          </div>
+          <p class="text-xs text-slate-500 mb-3">신축, 첫입주, 수려한외관, 코너자리</p>
+          <div class="flex gap-2">
+            <a href="tel:010-3901-3388" class="flex-1 bg-blue-600 text-white text-center py-2 rounded-lg text-xs font-bold">📞 문의</a>
+            <a href="#" class="flex-1 bg-slate-100 text-slate-600 text-center py-2 rounded-lg text-xs font-bold">상세 보기</a>
+            <a href="https://fin.land.naver.com/articles/2607703332" target="_blank" class="px-3 bg-white border border-slate-200 text-slate-500 text-center py-2 rounded-lg text-xs">🔗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 011 -->
+      <div class="card fade-in" data-rent="2500" data-area="151.11" data-new="1">
+        <div class="relative">
+          <img src="/images/011/photo_001.jpg" alt="011" class="w-full h-48 object-cover">
+          <div class="absolute top-3 left-3 flex gap-1.5">
+            <span class="tag tag-new">신축 2025</span>
+            <span class="tag tag-area">151평</span>
+          </div>
+          <div class="absolute bottom-3 right-3 bg-black/60 text-white text-[10px] px-2 py-1 rounded-md">사진 20장</div>
+        </div>
+        <div class="p-4">
+          <div class="flex justify-between items-start mb-2">
+            <div>
+              <h3 class="font-bold text-base text-slate-800">빌딩</h3>
+              <p class="text-xs text-slate-500">삼성로140길 19</p>
+            </div>
+            <div class="text-right">
+              <p class="text-xs text-slate-400">월세</p>
+              <p class="text-lg font-extrabold text-blue-600">2,500<span class="text-xs font-normal">만</span></p>
+            </div>
+          </div>
+          <div class="flex gap-4 text-xs text-slate-500 mb-3">
+            <span>보증금 <b class="text-slate-700">3억</b></span>
+            <span>지상<b class="text-slate-700">5</b>/지하<b class="text-slate-700">1</b></span>
+            <span>주차 <b class="text-slate-700">4대</b></span>
+            <span>준공 <b class="text-slate-700">2025</b></span>
+          </div>
+          <p class="text-xs text-slate-500 mb-3">신축, 첫입주, 청담역근처, 코너자리</p>
+          <div class="flex gap-2">
+            <a href="tel:010-9984-7229" class="flex-1 bg-blue-600 text-white text-center py-2 rounded-lg text-xs font-bold">📞 문의</a>
+            <a href="#" class="flex-1 bg-slate-100 text-slate-600 text-center py-2 rounded-lg text-xs font-bold">상세 보기</a>
+            <a href="https://fin.land.naver.com/articles/2610439561" target="_blank" class="px-3 bg-white border border-slate-200 text-slate-500 text-center py-2 rounded-lg text-xs">🔗</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ============ 푸터 ============ -->
+    <div class="bg-slate-900 text-white px-6 py-8">
+      <div class="text-center mb-6">
+        <div class="flex items-center justify-center gap-2 mb-3">
+          <div class="w-6 h-6 bg-blue-500 rounded-md flex items-center justify-center text-[10px] font-black">C</div>
+          <span class="text-xs font-semibold text-slate-400">CHEONGDAM PROPERTY</span>
+        </div>
+        <p class="text-xs text-slate-400 leading-relaxed">
+          본 페이지의 매물 정보는 네이버 부동산에서 수집되었으며<br>
+          실제 계약 조건은 해당 중개사에 직접 확인하시기 바랍니다.
+        </p>
+      </div>
+      <div class="border-t border-slate-800 pt-4 text-center">
+        <p class="text-[10px] text-slate-500">2026-02-25 기준 · AI 시세 분석 참고용</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // 스크롤 애니메이션
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+    // 정렬
+    function sortCards(type) {
+      const list = document.getElementById('cardList');
+      const cards = [...list.children];
+
+      // 버튼 스타일
+      document.querySelectorAll('#btnPrice,#btnArea,#btnNew').forEach(b => {
+        b.className = 'text-[11px] px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 font-medium';
+      });
+      document.getElementById('btn' + type.charAt(0).toUpperCase() + type.slice(1)).className =
+        'text-[11px] px-3 py-1.5 rounded-full bg-blue-600 text-white font-medium';
+
+      cards.sort((a, b) => {
+        if (type === 'price') return +a.dataset.rent - +b.dataset.rent;
+        if (type === 'area') return +b.dataset.area - +a.dataset.area;
+        if (type === 'new') return +b.dataset.new - +a.dataset.new || +a.dataset.rent - +b.dataset.rent;
+      });
+
+      cards.forEach(c => { c.classList.remove('visible'); list.appendChild(c); });
+      setTimeout(() => cards.forEach(c => c.classList.add('visible')), 50);
+    }
+  </script>
+</body>
+</html>
